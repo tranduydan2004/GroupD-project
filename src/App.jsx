@@ -1,15 +1,16 @@
-import { Outlet } from 'react-router-dom'
-import Header from './components/header'
+import { Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import AboutWe from './pages/AboutWe'
 import Footer from './components/Footer'
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <Outlet />
-      <Footer />
-    </>
+    <Routes>
+      <Route path='/' element={<Header />} />
+      <Route path='/ve-chung-toi' element={<AboutWe />} />
+      <Route path='/FOOTER' element={<Footer />} />
+    </Routes>
 
   )
 }
